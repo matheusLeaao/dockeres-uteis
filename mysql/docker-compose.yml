@@ -1,0 +1,19 @@
+version: "2"
+services:
+
+  mysqlDB:
+    image: mysql
+    restart: always
+    container_name: mysqlDB
+    hostname: containerMYSQL
+    environment:
+      MYSQL_DATABASE: "tabelateste"
+      MYSQL_USER: "admin" 
+      MYSQL_PASSWORD: "senha"
+      MYSQL_ROOT_PASSWORD: "senha"
+    ports: 
+      - "3306:3306"
+    volumes:
+    - /data_docker2/mysqldata/mydbvol:/var/lib/mysql
+volumes:
+  mydbvol:

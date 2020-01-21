@@ -1,0 +1,76 @@
+version: "2"
+services:
+
+  rabbitmq1:
+    build: .
+    container_name: rabbitmq1
+    hostname: containerRabbit1
+    network_mode: "bridge"
+    volumes:
+      - rabbitmqvol1:/var/lib/rabbitmq
+      - pluginsEZ_rabbitmq1:/plugins
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  rabbitmq2:
+    build: .
+    container_name: rabbitmq2
+    hostname: containerRabbit2
+    network_mode: "bridge"
+    volumes:
+      - rabbitmqvol2:/var/lib/rabbitmq
+      - pluginsEZ_rabbitmq2:/plugins
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  rabbitmq3:
+      build: .
+      container_name: rabbitmq3
+      hostname: containerRabbit3
+      network_mode: "bridge"
+      volumes:
+        - rabbitmqvol3:/var/lib/rabbitmq
+        - pluginsEZ_rabbitmq3:/plugins
+      environment:
+        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: "rabbitmq"
+        RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      ports:
+        - "15672:15672"
+        - "5672:5672"
+
+  rabbitmq4:
+      build: .
+      container_name: rabbitmq4
+      hostname: containerRabbit4
+      network_mode: "bridge"
+      volumes:
+        - rabbitmqvol4:/var/lib/rabbitmq
+        - pluginsEZ_rabbitmq4:/plugins
+      environment:
+        RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: "rabbitmq"
+        RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      ports:
+        - "15672:15672"
+        - "5672:5672"
+
+volumes:
+  rabbitmqvol1:
+  rabbitmqvol2:
+  rabbitmqvol3:
+  rabbitmqvol4:
+  pluginsEZ_rabbitmq1:
+  pluginsEZ_rabbitmq2:
+  pluginsEZ_rabbitmq3:
+  pluginsEZ_rabbitmq4:

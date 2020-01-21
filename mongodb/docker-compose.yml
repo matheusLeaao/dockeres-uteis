@@ -1,0 +1,17 @@
+version: "2"
+services:
+
+  mongoDB:
+    image: mongo:latest
+    restart: always
+    container_name: mongoDB
+    hostname: containerMONGODB
+    ports:
+    - "27017:27017"
+    volumes:
+    - /data_docker2/mongodata/mongovol:/data/db
+    - /data_docker2/mongodata/mongoconfig:/data/configdb
+
+volumes:
+  mongovol:
+  mongoconfig:
