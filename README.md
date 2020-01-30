@@ -1,6 +1,17 @@
 # dockeres-uteis
-### Desenvolvido por: Matheus Leão
-Voltado à demanda de cliente envolvendo Docker, foi solicitado que em uma máquina CentOS-7 Linux com 600GB de disco acoplados,
+# Matheus Lion
+
+### Celular: 
++55 (11) 9 6484-5375
+
+### Facebook: 
+https://www.facebook.com/matheus.leao.5?ref=bookmarks
+
+### LinkedIn: 
+https://www.linkedin.com/in/matheus-le%C3%A3o-622151162/
+
+## Repositório voltado a:
+Demanda de cliente envolvendo Docker, foi solicitado que em uma máquina CentOS-7 Linux com 600GB de disco acoplados,
 4 placas de rede (10.0.1.110, 10.0.1.111, 10.0.1.112, 10.0.1.113), 4 vCPU e 8ram.
 
 ## Como foi feito?
