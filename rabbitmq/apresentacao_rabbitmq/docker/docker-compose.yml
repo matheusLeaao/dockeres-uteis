@@ -1,0 +1,22 @@
+version: "2"
+services:
+
+  rabbitmq:
+    build: .
+    restart: always
+    container_name: rabbitmq1
+    hostname: containerRabbit1
+    network_mode: "bridge"
+    volumes:
+      - rabbitmqvol2:/var/lib/rabbitmq
+      - plugins_rabbit:/etc/rabbitmq/
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+volumes:
+  rabbitmqvol2:
+  plugins_rabbit:
